@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './components/navigation/Navigation';
+import Signin from './components/signin/SignIn';
 import Logo from './components/logo/Logo';
 import ImageLinkForm from './components/imagelinkform/ImageLinkForm';
 import Rank from './components/rank/Rank';
@@ -34,7 +35,8 @@ class App extends Component {
     this.state = {
       input: '',
       imageUrl: '',
-      box: {}
+      box: {},
+      route: 'signin'
     }
   }
 
@@ -77,13 +79,18 @@ class App extends Component {
           params={particlesOptions}
         />
         <Navigation />
-        <Logo />
-        <Rank />
-        <ImageLinkForm 
-          onInputChange={this.onInputChange} 
-          onButtonSubmit={this.onButtonSubmit}
-        />
-        <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl}/>
+        { this.state.route === 'signin'
+          ? <Signin />
+          : <div>
+            <Logo />
+            <Rank />
+            <ImageLinkForm 
+              onInputChange={this.onInputChange} 
+              onButtonSubmit={this.onButtonSubmit}
+            />
+            <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl}/>
+          </div>
+        }
       </div>
     );
   }
