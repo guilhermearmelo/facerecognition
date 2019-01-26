@@ -147,3 +147,18 @@ class App extends Component {
 }
 
 export default App;
+
+
+/*
+To do list:
+( ) Setting up database
+( ) Connecting to database
+( ) Registering User
+( ) Getting User Profile
+( ) Updating Entries
+( ) Sign In
+( ) Putting All Together
+( ) Code Review
+( ) Security Review
+( ) Deploy
+*/
