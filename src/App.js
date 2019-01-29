@@ -152,8 +152,8 @@ export default App;
 /*
 To do list:
 (x) Settting up .gitignore properly
-( ) Setting up database
-( ) Connecting to database
+(x) Setting up database
+(x) Connecting to database
 ( ) Registering User
 ( ) Getting User Profile
 ( ) Updating Entries
